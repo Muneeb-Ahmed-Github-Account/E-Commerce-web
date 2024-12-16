@@ -1,7 +1,7 @@
-// import Image from "next/image"
-// import Link from "next/link";
-// import { FaStar } from "react-icons/fa";
-// import { useParams } from "next/navigation";
+ import Image from "next/image"
+ import Link from "next/link";
+ import { FaStar } from "react-icons/fa";
+ import { useParams } from "next/navigation";
 
 interface Mproducts{
     title : string
@@ -46,6 +46,8 @@ let Top_products :Mproducts[]=[
 ]
 
 export default function Pro_Details(){
+
+    
     return (
         <div>
             <h1>Products detail</h1>

@@ -52,9 +52,9 @@ export default function Top_Selling_products(){
             <h1 className="text-2xl xs:mt-[850px] md:text-4xl font-extrabold text-center">TOP SELLING</h1>
             <div className="flex flex-col md:flex-row justify-center items-center md:justify-between px-8 mt-10">
                 {
-                    Top_products.map((data)=>{
+                    Top_products.map((data , id)=>{
                         return(
-                            <div key={data.id} >
+                            <div key={id} >
                                 <Link href={`/products/${data.id}`}>
                                 <div className="w-[220px] h-[230px] bg-[#FOEEED]">
                                 <Image src={data.pic_url} alt={data.title} className="w-full h-full rounded-[20px]" width={100} height={100}></Image>
@@ -62,7 +62,7 @@ export default function Top_Selling_products(){
                                 </Link>
                                 <div>
                                 <p className="text-lg mt-2 font-bold">{data.title}</p>
-                                <p className="flex text-yellow-500">{Star}</p>
+                                <p className="flex text-yellow-500" key={id}>{Star}</p>
                                 <p className="font-bold mt-1">{data.price} <span className="text-gray-400 font-bold line-through">{data.old_price}</span> </p>
                                 
                                 </div>
