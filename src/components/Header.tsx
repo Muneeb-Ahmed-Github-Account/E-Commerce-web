@@ -8,7 +8,7 @@ import { NavigationMenuDemo } from "./NavigationMenu";
 
 export default function Header() {
   return (
-   <header className="flex w-full h-[70px] justify-between items-center">
+   <header className="max-w-screen-2xl mx-auto flex w-full h-[70px] justify-between items-center">
     {/*left*/}
     <div className="flex justify-center items-center ">
         <SheetSide/>
@@ -19,7 +19,7 @@ export default function Header() {
         <li className="space-x-5 flex justify-center items-center">
             <Link href={""}><NavigationMenuDemo/></Link>
             <Link href={""}>On Sale</Link>
-            <Link href={""}>NEW ARRIVALS</Link>
+            <Link href={"/products"}>NEW ARRIVALS</Link>
             <Link href={""}>Brands</Link>
         </li>
     </ul>
@@ -34,7 +34,9 @@ export default function Header() {
        {/*CART*/}
        <div className="flex items-center mr-[30px] space-x-5">
        <TbSearch className="text-xl ml-3 md:hidden"/>
+       <Link href={"/cart"}>
        <FiShoppingCart />
+       </Link>
        <BsPersonVideo />
        </div>
 

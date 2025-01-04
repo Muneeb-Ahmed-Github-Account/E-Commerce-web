@@ -9,47 +9,48 @@ interface Mproducts{
     rating? : number
     old_price? : string
     pic_url : string
-    // str_rank? : string
+   
     
 }
 
 let Top_products :Mproducts[]=[
     
     {
-        title : "VERTICAL STRIPED SHIRT",
-        id : 5,
+        title : "Polo with Contrast Trims",
+        id : 9,
         price : "$212",
-        old_price: "$232",
-        pic_url : "/product5.png",
+        old_price: "$242",
+        pic_url : "/tshirt1.png",
     },
     {
-        title : "COURAGE GRAPHIC T-SHIRT",
-        id : 6,
+        title : "Gradient Graphic T-shirt",
+        id : 10,
         price : "$145",
+        pic_url : "/tshirt2.png",
+    },
+    {
+        title : "Polo with Tipping Details",
+        id : 11,
+        price : "$180",
+        pic_url : "/tshirt3.png",
+    },
+    {
+        title : "Black Striped T-shirt",
+        id : 12,
+        price : "$120",
+        old_price: "$160",
+        pic_url : "/tshirt4.png",
         
-        pic_url : "/product6.png",
-    },
-    {
-        title : "LOOSE FIT BERMUDA SHORTS",
-        id : 7,
-        price : "$80",
-        pic_url : "/product7.png",
-    },
-    {
-        title : "FADED SKINNY JEANS",
-        id : 8,
-        price : "$210",
-        pic_url : "/product8.png",
     },
 ]
 
 let Star = [<FaStar key={1}/>, <FaStar key={2}/>,<FaStar key={3}/>,<FaStar key={4}/>,<FaStar key={5}/>];
 
-export default function Top_Selling_products(){
+export default function Tshirt_products(){
     return(
-        <div className="w-full h-[500px] mt-10 ">
-            <h1 className="text-2xl xs:mt-[850px] md:text-4xl font-extrabold text-center">TOP SELLING</h1>
-            <div className="flex flex-col md:flex-row justify-center items-center md:justify-between px-8 mt-10">
+        <div className="w-full h-full md:h-[500px] mt-10 max-w-screen-2xl mx-auto">
+            <h1 className="text-2xl xs:mt-[850px] md:text-4xl font-extrabold text-center">YOU MIGHT ALSO LIKE</h1>
+            <div className="flex flex-col md:flex-row justify-center items-center md:justify-evenly px-8 mt-10">
                 {
                     Top_products.map((data , id)=>{
                         return(
@@ -60,7 +61,7 @@ export default function Top_Selling_products(){
                                 </div>
                                 </Link>
                                 <div>
-                                <p className="text-sm md:text-lg mt-2 font-bold">{data.title}</p>
+                                <p className="text-lg mt-2 font-bold">{data.title}</p>
                                 <div className="flex text-yellow-500">
                                      {
                                         Star.map((icon,index)=> (
@@ -79,4 +80,3 @@ export default function Top_Selling_products(){
         </div>
     )
 }
-  

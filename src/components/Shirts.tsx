@@ -1,5 +1,4 @@
 import Image from "next/image"
-import Link from "next/link";
 import { FaStar } from "react-icons/fa";
 
 interface Mproducts{
@@ -15,51 +14,81 @@ interface Mproducts{
 let products :Mproducts[]=[
     
     {
-        title : "T-SHIRT WITH TAPE DETAILS",
+        title : "Gradient Graphic T-shirt",
         id : 1,
+        price : "$145",
+        pic_url : "/tshirt2.png",
+    },
+    {
+        title : "Polo with Tipping Details",
+        id : 2,
+        price : "$180",
+        pic_url : "/tshirt3.png",
+    },
+    {
+        title : "Black Striped T-shirt",
+        id : 3,
         price : "$120",
-        pic_url : "/product1.png",
+        old_price: "$160",
+        pic_url : "/tshirt4.png",
     },
     {
         title : "SKINNY FIT JEANS",
-        id : 2,
+        id : 4,
         price : "$240",
         old_price: "$260",
         pic_url : "/product2.png",
     },
     {
         title : "CHECKERED SHIRT",
-        id : 3,
+        id : 5,
         price : "$180",
         pic_url : "/product3.png",
     },
     {
         title : "SLEEVE STRIPED T-SHIRT",
-        id : 4,
+        id : 6,
         price : "$130",
         old_price: "$160",
         pic_url : "/product4.png",
+    },
+    {
+        title : "VERTICAL STRIPED SHIRT",
+        id : 7,
+        price : "$212",
+        old_price: "$232",
+        pic_url : "/product5.png",
+    },
+    {
+        title : "COURAGE GRAPHIC T-SHIRT",
+        id : 8,
+        price : "$145",
+        pic_url : "/product6.png",
+    },
+    {
+        title : "LOOSE FIT BERMUDA SHORTS",
+        id : 9,
+        price : "$80",
+        pic_url : "/product7.png",
     },
 ]
 
 let Star = [<FaStar key={1}/>, <FaStar key={2}/>,<FaStar key={3}/>,<FaStar key={4}/>,<FaStar key={5}/>];
 
-export default function Products(){
+export default function Shirts(){
     return(
-        <div className="w-full h-full sm:h-[500px] mt-10">
-            <h1 className="text-2xl md:text-4xl font-extrabold text-center">NEW ARRIVALS</h1>
-            <div className="flex flex-col md:flex-row justify-center items-center md:justify-between px-6 mt-10">
+        <div className="w-full h-full sm:h-[500px] mt-3">
+            <h1 className="text-xl md:text-2xl font-extrabold text-start ml-7">Casual</h1>
+            <div className="flex flex-wrap flex-col md:flex-row justify-center items-center md:justify-between px-3 mt-5">
                 {
                     products.map((data)=>{
                         return(
                             <div key={data.id}>
-                                <Link href={`/products/${data.id}`}>
-                                <div className="w-[220px] h-[230px] bg-[#FOEEED]">
+                                <div className="w-[230px] h-[250px] bg-[#FOEEED]">
                                 <Image src={data.pic_url} alt={data.title} className="w-full h-full rounded-[20px]" width={100} height={100}></Image>
                                 </div>
-                                </Link>
                                 <div>
-                                <p className="text-sm md:text-lg mt-2 font-bold">{data.title}</p>
+                                <p className="text-sm mt-2 font-bold">{data.title}</p>
                                 <div className="flex text-yellow-500">
                                      {
                                         Star.map((icon,index)=> (
@@ -67,7 +96,7 @@ export default function Products(){
                                         ))
                                      }
                                 </div>
-                                <p className="font-bold mt-1">{data.price} <span className="text-gray-400 font-bold line-through">{data.old_price}</span> </p>
+                                <p className="font-bold mt-1 mb-7">{data.price} <span className="text-gray-400 font-bold line-through">{data.old_price}</span> </p>
                                 
                                 </div>
                             </div>
@@ -78,4 +107,3 @@ export default function Products(){
         </div>
     )
 }
-  

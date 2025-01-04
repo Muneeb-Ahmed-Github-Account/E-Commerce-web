@@ -1,7 +1,6 @@
 "use client"
 
 import * as React from "react"
-// import Link from "next/link"
 
 import { cn } from "@/lib/utils"
 import {
@@ -12,6 +11,7 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu"
+import Link from "next/link"
 
 const components: { title: string; href: string; description: string }[] = [
   
@@ -51,14 +51,15 @@ export function NavigationMenuDemo() {
           </NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid w-[332px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
-              {components.map((component) => (
+              {components.map((component,index) => (
+               <Link href={"/casual"} key={index}>
                 <ListItem
                   key={component.title}
                   title={component.title}
-                  href={component.href}
-                >
+                  href={component.href}>
                   {component.description}
                 </ListItem>
+                </Link>
               ))}
             </ul>
           </NavigationMenuContent>
