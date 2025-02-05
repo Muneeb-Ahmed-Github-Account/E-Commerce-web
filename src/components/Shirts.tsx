@@ -81,7 +81,7 @@ export default function Shirts(){
             <h1 className="text-xl md:text-2xl font-extrabold text-start ml-7">Casual</h1>
             <div className="flex flex-wrap flex-col md:flex-row justify-center items-center md:justify-between px-3 mt-5">
                 {
-                    products.map((data)=>{
+                    products.map ((data)=>{
                         return(
                             <div key={data.id}>
                                 <div className="w-[230px] h-[250px] bg-[#FOEEED]">

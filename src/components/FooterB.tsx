@@ -14,13 +14,13 @@ export default function FooterB (){
             </span>
             
            {/* TOP DIV */}
-           <div className="flex h-[335px] flex-col md:flex-row justify-between items-start p-5 pt-[180px] md:pt-32 border-b">
+           <div className="max-w-screen-2xl flex h-[335px] flex-col md:flex-row justify-between items-start p-5 pt-[180px] md:pt-32 border-b">
            <div className="flex flex-row justify-center items-center w-[250px] ml-14 md:ml-12">
             <ul className="">
                 <h2 className="text-2xl sm:text-3xl font-extrabold ">SHOP.CO</h2>
                 <p className="w-[357px] md:w-[245px] h-[40px] md:h-[65px] md text-sm mt-2 md:mt-3  text-gray-500">We have clothes that suits your style and which you’re proud to wear. From women to men.</p>
                 {/* ICONS */}
-                 <div className="flex items-center space-x-3 mt-4 md:mt-8">
+                  <div className="flex items-center space-x-3 mt-4 md:mt-8">
                     <TiSocialTwitterCircular className="text-xl"/>
                                  <FaFacebook className="text-xl"/>
                             <RiInstagramLine className="text-xl"/>
@@ -30,7 +30,7 @@ export default function FooterB (){
            </div>
 
            {/* MEDIUM DIV */}
-           <div className="w-full md:w-[900px] grid grid-cols-2 md:grid-cols-4 mt-6 md:mt-0 space-x-4">
+           <div className=" w-full md:w-[900px] grid grid-cols-2 md:grid-cols-4 mt-6 md:mt-0 space-x-4">
              {/* BOX 1 */}
               
                   <ul className="space-y-4 ml-4 md:ml-14 text-gray-500">
